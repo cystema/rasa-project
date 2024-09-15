@@ -1,0 +1,46 @@
+version: '3.1'
+intents:
+- affirm
+- angry
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- movie
+responses:
+  utter_movie:
+  - text: that's great! hope you enjoy it
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hey! What's up? How are you doing today?
+  - text: What's up friend?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  - text: Things can seem tough right now, but I assure you things will get better.
+  utter_calm_down:
+  - text: Relax! Take some time off and go watch a movie.
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: I hope that helped you a little. Did it?
+  utter_happy:
+  - text: Great, carry on!
+  - text: That's awesome!
+  utter_goodbye:
+  - text: Bye
+  - text: Goodbye! Don't hesitate to ask me if you have anything else to talk about.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  - text: I am a bot, I can only do bot things.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_calm_down
+- utter_did_that_help
+- utter_greet
+- utter_movie
+entities:
+- movie
